@@ -18,14 +18,14 @@ public class Hello {
 
 	}
 
-	// Constructor
+	// Constructor that will initialize a class variable.
 	Hello(String name) {
 
 		this.name = name;
 
 	}
 
-	// Overloaded constructor
+	// Apply constructor overloading.
 	Hello(String name, int age) {
 
 		this.name = name;
@@ -40,7 +40,7 @@ public class Hello {
 		System.out.println("");
 	}
 
-	// Overloaded method
+	// Apply method overloading for printNumbers method
 	public void printNumbers(int first, int last) {
 		this.first = first;
 		this.last = last;
@@ -52,7 +52,7 @@ public class Hello {
 		System.out.println("");
 	}
 
-	// Getter for myString
+	// Getter for myString (property that returns a string.)
 	public String getMyString() {
 		return myString;
 	}
@@ -62,7 +62,7 @@ public class Hello {
 		this.myString = myString;
 	}
 
-	// Print separated list of 20 numbers between odds and even
+	// Create a method to separate a list of 20 numbers between odds and even
 	public void oddAndEven() {
 
 		ArrayList<Integer> arrL = new ArrayList<Integer>();
@@ -96,7 +96,17 @@ public class Hello {
 		System.out.println(" ");
 	}
 
-	// Print numbers in specific pattern - from 0 to 20
+	/* Create a method to print numbers in the following pattern - from 0 to 20
+		x
+  		  x
+     		x 
+        	  x
+           		x
+         	  x
+      		x
+   		  x
+		x	  
+	 */
 	public void builder() {
 
 		StringBuilder sb = new StringBuilder();
@@ -134,12 +144,16 @@ public class Hello {
 
 		Hello secondConstructor = new Hello("Osiris", 28);
 		System.out.println("My name is " + secondConstructor.name + " and I'm " + secondConstructor.age + " years old");
-
+		
 		Hello print2 = new Hello();
 		print2.printNumbers(5);
 
 		Hello print = new Hello();
 		print.printNumbers(0, 10);
+		
+		Hello thisString = new Hello();
+		thisString.setMyString("Hi there!");
+		System.out.println(thisString.getMyString());
 
 		Hello list = new Hello();
 		list.oddAndEven();
